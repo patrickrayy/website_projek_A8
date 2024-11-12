@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { height, width } from '@fortawesome/free-brands-svg-icons/fa42Group';
 
 const HeroSection = () => {
   return (
@@ -11,7 +12,7 @@ const HeroSection = () => {
         <div style={styles.searchBar}>
           <input type="text" placeholder="Search destination, location, & price" style={styles.searchInput} />
           <button style={styles.searchButton}>
-            <FontAwesomeIcon icon={faSearch} />
+            <FontAwesomeIcon icon={faSearch} /> Search
           </button>
         </div>
       </div>
@@ -24,11 +25,11 @@ const styles = {
     heroSection: {
         display: 'flex',
         justifyContent: 'space-between',
-        padding: '40px',
+        padding: '0px',
         backgroundColor: '#E6F0FA',
         borderRadius: '15px',
         margin: '60px',
-        height: '400px',
+        height: '656px',
         position: 'relative',
         borderTopLeftRadius: '25px',  // Border-radius hanya di atas kiri
         borderTopRightRadius: '25px',
@@ -36,7 +37,7 @@ const styles = {
         borderBottomRightRadius: '0',
         top:'70px',
         marginBottom: '130px',
-        fontFamily: 'Open Sans, sans-serif',
+        fontFamily: 'Montserrat, sans-serif',
         fontWeight: 600,
         
       },
@@ -44,57 +45,86 @@ const styles = {
       textContainer: {
         maxWidth: '35%',
         zIndex: 1,  // Membuat textContainer tetap di belakang search bar
-        fontFamily: 'Open Sans, sans-serif',
+        fontFamily: 'Montserrat, sans-serif',
         fontWeight: 500,
-        color: '//#region 1C1C1C',
+        color: 'black',
+        padding: '40px'
+      },
+
+      heading: {
+        fontSize: '60px',
+        fontWeight: 'semibold',
+        color: '#00000'
       },
       textp: {
-        fontFamily: 'Open Sans, sans-serif',
+        fontSize: '1.25rem',
+        fontFamily: 'Montserrat, sans-serif',
         fontWeight: 100,
         color: '#797A7B',
       },
     
       searchBar: {
-        position: 'absolute',  // Memastikan search bar berada di depan kontainer
-        top: '100%',  // Menempatkan search bar di tengah-tengah heroSection
-        left: '10%',  // Memberi sedikit margin dari kiri
-        width: '80%',  // Membuat search bar memanjang
-        transform: 'translateY(-50%)',  // Menjaga agar search bar tetap berada di tengah vertikal
+        backgroundColor: 'white',
+        position: 'absolute',
+        top: '100%',
+        left: '10%',
+        width: '80%',
+        height: '72px',
+        transform: 'translateY(-50%)',
         display: 'flex',
-        backgroundColor: 'white',  // Memberikan latar belakang putih agar kontras
-        padding: '10px',
-        borderRadius: '25px',
-        boxShadow: '0px 8px 10px rgba(0, 0, 0, 0.2)',  // Memberikan efek bayangan agar lebih menonjol
-        fontFamily: 'Open Sans, sans-serif',
+        alignItems: 'center',
+        // padding: '10px',
+        borderRadius: '280px', 
+        boxShadow: '0px 8px 10px rgba(0, 0, 0, 0.2)',
+        fontFamily: 'Montserrat, sans-serif',
+        overflow: 'hidden',    
+        border: 'none'
       },
       
       searchInput: {
-        flex: 1,
-        padding: '0px',
-        fontSize: '16px',
+        flex: 1,                          // Make input take available space
+        padding: '32px',
+        backgroundColor: 'white',
+        fontSize: '18px',
+        border: 'none',
+        outline: 'none',
+        color: '#000000',
+        fontFamily: 'Open Sans, sans-serif'
       },
       
       searchButton: {
-        padding: '10px 15px',
-        backgroundColor: '#007BFF',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '10px 20px',
+        backgroundColor: '#0F67B1',
         color: 'white',
-        borderRadius: '0 25px 25px 0',
+        borderRadius: '280px',            // Large rounded radius on all sides
         cursor: 'pointer',
+        fontSize: '16px',
+        border: 'none',
         fontFamily: 'Open Sans, sans-serif',
+        fontSize: '20px',
+        height: '100%',
+        width: '176px',
+        gap: '8px',
       },
       
+      
+      
       heroImage: {
-        position: 'absolute',
-        width: '50%',
+        position: 'flex',
+        width: '50vw',
         height: '100%',
         borderRadius: '15px',
         objectFit: 'cover',
-        borderTopLeftRadius: '0px',  // Border-radius hanya di atas kiri
+        borderTopLeftRadius: '0px',  
         borderTopRightRadius: '25px',
-        borderBottomLeftRadius: '0',  // Tidak ada border-radius di bawah kiri
+        borderBottomLeftRadius: '0',  
         borderBottomRightRadius: '0',
         top: 0,
-        left : 580,
+        right : 0,
+        translateX: '50%',
       },
 };
 

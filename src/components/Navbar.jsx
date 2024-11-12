@@ -8,11 +8,13 @@ const Navbar = () => {
       </div>
       <div style={styles.navLinks}>
         <div style={styles.navLinksnav}>
-        <a href="app.jsx" style={styles.link}>Home</a>
-        <a href="about.jsx" style={styles.link}>About</a>
-        <a href="itenerary.jsx" style={styles.link}>Itinerary</a>
-        <a href="#contact" style={styles.link}>Contact</a>
+          <a href="app.jsx" style={styles.link}>Home</a>
+          <a href="about.jsx" style={styles.link}>About</a>
+          <a href="itenerary.jsx" style={styles.link}>Itinerary</a>
+          <a href="#contact" style={styles.link}>Contact</a>
         </div>
+      </div>
+      <div style={styles.buttonContainer}>
         <button style={styles.button}>Login</button>
         <button style={styles.registerButton}>Register</button>
       </div>
@@ -20,67 +22,70 @@ const Navbar = () => {
   );
 };
 
-
 const styles = {
   navbar: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '20px 50px',
+    padding: '10px 0',
     backgroundColor: '#0F67B1',
     color: 'white',
-    width: '1160px',
-    height: '50px',
-    position: 'fixed', 
+    width: '100%',
+    position: 'fixed',                
+    top: 0,
+    left: 0,
     zIndex: 1000,
-    top: 0,  // Menjaga navbar tetap di bagian atas
-    left: 0,  //
   },
   logo: {
     display: 'flex',
+    alignItems: 'center',
+    marginLeft: '120px',              
   },
   logoImage: {
-    width: '150px',
-    marginLeft: '30px',
+    width: '130px',
   },
   navLinks: {
     display: 'flex',
-    alignItems: 'center',
-    gap: '15px',
+    flex: 1,
+    justifyContent: 'center',
   },
   navLinksnav: {
-
     display: 'flex',
     alignItems: 'center',
-    gap: '20px',
-    marginRight: '230px',
-    fontFamily: 'Montserrat, sans-serif', // Apply Montserrat Regular
-    fontWeight: '20',
+    gap: '16px',                      
+    fontFamily: 'Montserrat, sans-serif',
+    fontSize: '20px',
   },
   link: {
     color: 'white',
     textDecoration: 'none',
     fontSize: '1em',
   },
+  buttonContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    marginRight: '120px',          
+    gap: '10px',                      
+  },
   button: {
-    marginLeft: '10px',
     padding: '5px 15px',
     color: 'white',
     backgroundColor: '#0F67B1',
     border: '1px solid white',
     borderRadius: '5px',
     cursor: 'pointer',
+    fontFamily:'Montserrat, sans-serif'
   },
   registerButton: {
     padding: '5px 15px',
-    color: 'blue',
+    color: '#0F67B1',
     backgroundColor: '#FFFFFF',
     border: '1px solid white',
     borderRadius: '5px',
     cursor: 'pointer',
-    marginRight:'30px',
+    fontFamily:'Montserrat, sans-serif',
+    fontWeight: '550'
   },
-  // Tambahkan style lainnya
 };
 
 export default Navbar;
