@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav style={styles.navbar}>
       <div style={styles.logo}>
-        <img src="/asset/image/logo website tripbaliin.png" alt="Logo" style={styles.logoImage} />
+        <img src="../img/TripBaliInLogo.png" alt="Logo" style={styles.logoImage} />
       </div>
       <div style={styles.navLinks}>
         <div style={styles.navLinksnav}>
-          <a href="app.jsx" style={styles.link}>Home</a>
-          <a href="about.jsx" style={styles.link}>About</a>
-          <a href="itenerary.jsx" style={styles.link}>Itinerary</a>
-          <a href="#contact" style={styles.link}>Contact</a>
+          <Link to="/HomePage.jsx" style={styles.link}>Home</Link>
+          <Link to="/AboutPage.jsx" style={styles.link}>About</Link>
+          <Link to="/ItineraryPage.jsx" style={styles.link}>Home</Link>
+          <Link to="/ContactPage.jsx" style={styles.link}>Home</Link>
         </div>
       </div>
       <div style={styles.buttonContainer}>

@@ -101,7 +101,6 @@ const styles = {
         color: 'white',
         borderRadius: '280px',            // Large rounded radius on all sides
         cursor: 'pointer',
-        fontSize: '16px',
         border: 'none',
         fontFamily: 'Open Sans, sans-serif',
         fontSize: '20px',
